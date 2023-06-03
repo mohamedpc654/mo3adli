@@ -1,0 +1,417 @@
+#h1{
+  font-size: 25px;
+  color: black;
+  overflow: hidden;
+  position: relative;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#h1::after{
+content: "Informatique";
+display: inline-block;
+animation: animation 4s steps(9) infinite;
+width: 0ch;
+color: lightseagreen;
+
+
+}
+
+
+@keyframes animation {
+  14%{
+      content: "Informatique";
+      width:auto;
+  }
+  28%{ width: auto;
+      content: "Science experimental";
+  }
+  42%{width:auto;
+  content: "Lettre";
+  }
+  56%{width:auto;
+  content: "Technique";
+  }
+  70%{width:auto;
+  content: "Sport";
+  }
+  84%{width:auto;
+  content: "Economique";
+  }
+  98%{
+      width:auto;
+  content: "Math";
+  }
+}
+.minicercle{
+  border-style: solid;
+  border-color: black;
+  width: 3cm;
+  border-radius:5px ;
+  
+}
+
+.section{
+  margin-top: 20px;
+  display: flex;
+}
+.lable{
+  font-weight: bold;
+  margin-right: 10px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  
+  cursor: pointer;    
+  font-size: 20px;    
+
+}
+a:link{color:black;
+text-decoration: none;}
+a:hover{
+  color:grey;
+}
+a:visited{
+  color:black;
+}
+
+
+
+
+
+/*input:valid{
+  border-color: green;
+}
+input:invalid {
+  border-color: red;
+  animation: shake 0.4s linear;
+}*/
+
+h3{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: normal;
+  font-style: normal; 
+  background-color: tomato;
+  width: auto;
+  text-align: center;
+  border-radius: 5px;
+  color: white;
+}
+
+.moy{
+  width: 100px;
+  height: 25px;
+  border-color: black;
+  
+}
+.inputinf{
+ height: 30px;
+ 
+ width: 100%;
+}
+
+
+
+
+
+
+/* End container */
+
+body {
+  font-family: "Libre Baskerville", serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 30px;
+  background-color: #040507;
+  color: #ababab;
+}
+
+.all .overlay {
+  background-color: black;
+}
+.title {
+  text-transform: uppercase;
+  font-size: 23px;
+  font-weight: bolder;
+  letter-spacing: 1.5px;
+  color: white;
+  text-align: center;
+  line-height: 45px;
+}
+
+
+input[type="checkbox"] {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #4CAF50;
+  border-radius: 4px;
+  transition: all 0.2s ease-in-out;
+}
+
+input[type="checkbox"]:checked {
+  background-color: #4CAF50;
+}
+
+input[type="checkbox"]:checked::before {
+  content: "\2713";
+  display: block;
+  color: white;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+}
+
+
+
+
+
+
+
+
+.box input[type="number"]:focus + label[placeholder]:before,
+.box input[type="number"]:valid + label[placeholder]:before{
+  transition-duration: .2s;
+  transform: translate(0, -1.6em) scale(0.9, 0.9);	
+	
+}
+
+.box input[type="number"]:valid{
+	border-color: green;
+}
+.box input[type="number"]:invalid{
+	border-color: red;
+}
+
+
+
+.box input[type="number"] + label[placeholder] {
+  display: block;	
+  pointer-events: none;
+  line-height: 2em;
+  padding: 0 4px;
+  margin-top: calc(-3.5em - 2px);
+  margin-bottom: calc((3.5em - 1em) + 2px);
+}
+
+.box input[type="number"] + label[placeholder]:before {
+  content: attr(placeholder);
+  display: inline-block;
+  margin: 0 calc(0.5em + 2px);
+  padding: 0 5px;
+  color: #7d7d7d;
+  white-space: nowrap;
+  transition: 0.3s ease-in-out;
+  background-color: #040507;
+  background-size: 100% 5px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.box,
+.box2 {
+  padding: 10px;
+  text-align: center;
+}
+
+
+.box input[type="number"] {
+  border: 0;
+  background: none;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  border: 2px solid #3498db;
+  padding: 14px 10px;
+  width: 150px;
+  color: white;
+  border-radius: 24px;
+ 
+}
+
+.box input[type="number"]:focus {
+  width: 220px;
+  border-color: #2ecc71;
+}
+.box2 input[type="submit"],
+.box2 input[type="text"] {
+  border: 0;
+  background: none;
+  display: block;
+  width: 200px;
+  margin: 20px auto;
+  text-align: center;
+  border: 2px solid #2ecc71;
+  padding: 14px 40px;
+  outline: none;
+  color: white;
+  border-radius: 24px;
+  transition: 0.25s;
+  cursor: pointer;
+}
+
+.box input[type="submit"]:hover {
+  background: #2ecc71;
+  width: 300px;
+}
+.text {
+  text-align: center;
+  letter-spacing: 2px;
+  color: white;
+  font-size: 18px;
+}
+.ou {
+  text-align: center;
+  color: red;
+  font-size: 15px;
+}
+
+
+#footer {
+  text-align: center;
+}
+
+
+
+@media (min-width: 768px) {
+  #col-1 {
+    position: relative;
+    width: 50%;
+    float: left;
+    height: 100%;
+    background-color: black;
+   
+  }
+
+  #col-2 {
+    position: relative;
+    width: 50%;
+    float: left;
+    height: 100%;
+    background-color: black;
+   
+  }}
+  .box,
+  .box2 {
+    padding: 25px;
+    text-align: center;
+  }
+  .box input[type="number"] {
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #3498db;
+    padding: 14px 10px;
+    width: 200px;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.25s;
+  }
+  .box input[type="number"]:focus {
+    width: 280px;
+    border-color: #2ecc71;
+  }
+  .box input[type="submit"],
+  .box input[type="text"] {
+    border: 0;
+    background: none;
+    display: block;
+    margin: 30px auto;
+    text-align: center;
+    border: 2px solid #2ecc71;
+    padding: 14px 40px;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.25s;
+    cursor: pointer;
+  }
+  .box input[type="submit"],
+  .box input[type="text"] {
+    width: 600px;
+  }
+  
+ 
+  .title {
+    text-transform: uppercase;
+    font-size: 43px;
+    font-weight: bolder;
+    letter-spacing: 3px;
+    color: white;
+    text-align: center;
+    line-height: 55px;
+  }
+
+
+
+
+
+/*button calcul*/
+.button-28 {
+  appearance: none;
+  background-color: transparent;
+  border: 2px solid #1A1A1A;
+  border-radius: 15px;
+  box-sizing: border-box;
+  color: #3B3B3B;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  font-size: 16px;
+  font-weight: 600;
+  line-height: normal;
+  margin: 0;
+  min-height: 60px;
+  min-width: 0;
+  outline: none;
+  padding: 16px 24px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 100%;
+  will-change: transform;
+}
+
+.button-28:disabled {
+  pointer-events: none;
+}
+
+.button-28:hover {
+  color: #fff;
+  background-color: #1A1A1A;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+}
+
+.button-28:active {
+  box-shadow: none;
+  transform: translateY(0);
+}
+
+/*ifram*/
+.iframe-container {
+  position: absolute;
+ margin-top: 1cm;
+  width: 90%;
+  height: 100%;
+  padding-bottom: 56.25%; /* Assuming a 16:9 aspect ratio, adjust as needed */
+}
+
+.iframe-container iframe {
+  position: absolute;
+  margin-left: 2cm;
+   border: none;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.box1{
+ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ font-size: 16px;
+ width: 100%;
+}

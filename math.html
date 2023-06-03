@@ -1,0 +1,150 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    
+    <title>Mo3dli | BAC Math</title>
+    
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+    <main class="all">
+        <div class="principale">
+            <div class="overlay">
+                <div class="container">
+                    <h1 class="title">Calculer Moyenne et Score BAC Math</h1>
+                    <form id="myFormNr" class="box">
+                        
+                        <div id="col-1">
+                            <input type="number" id="maNr" min="0" max="20" step="any" required autofocus>
+                            <label for="maNr" alt="Math" placeholder="Math"></label>
+                            <input type="number" id="in" min="0" max="20" step="any" required>
+                            <label for="in" alt="" placeholder="info"></label>
+                            <input type="number" id="sc" min="0" max="20" step="any" required>
+                            <label for="sc" alt="Sti" placeholder="Science"></label>
+                            <input type="number" id="frNr" min="0" max="20" step="any" required>
+                            <label for="frNr" alt="Français" placeholder="Français"></label>
+                            <input type="number" id="phNr" min="0" max="20" step="any" required>
+                            <label for="phNr" alt="Philo" placeholder="Philo"></label>
+                            <input type="number" id="arNr" min="0" max="20" step="any" required>
+                            <label for="arNr" alt="Arabe" placeholder="Arabe"></label>
+                        </div>
+                        <div id="col-2">
+                            <input type="number" id="phyNr" min="0" max="20" step="any" required>
+                            <label for="phyNr" alt="Physique" placeholder="Physique"></label>
+                            <input type="number" id="anNr" min="0" max="20" step="any" required>
+                            <label for="anNr" alt="Anglais" placeholder="Anglais"></label>
+                            <div
+                                style="display: flex; flex-direction: row;justify-content: center;align-content: center">
+                                <input type="checkbox" id="dispenserCheckbox" onclick="toggleInput()"
+                                    style="margin-right: 10px;">
+                                <label for="dispenserCheckbox"> Dispenser</label>
+                            </div>
+                            <input type="number" id="spNr" min="0" max="20" step="any" required>
+                            <label for="spNr" alt="Sport" placeholder="Sport"></label>
+                            <input type="number" id="opNr" min="0" max="20" step="any" required>
+                            <label for="opNr" alt="Option" placeholder="Option"></label>
+                        </div>
+                        
+
+
+                        <fieldset style="margin-top:1cm ;width: auto;background-color: rgb(19, 15, 15);">
+                            <legend style="font-size: large;">Resultat</legend>
+                            
+                            <table ><tr>
+                                <td> <label style="font-size: large; " for=""> المعدل التقريبي للبكالوريا </label></td><td><input type="text" readonly id="moyNr"  class="moy" ></td></tr>
+                                <tr><td><label for="" style="font-size: large; margin-right: 2cm;"> Score (FG : Formule Globale)  </label></td><td><input type="text" id="scoreNr"  readonly class="moy"></td><td><button type="button" onclick="calculNr()" class="button-28" id="calc" > Calculer la Moyenne</button></td></tr>
+                                <tr> <td><label for=""  style="font-size: large;"> Score + التنفيل الجغرافي (7%) </label></td><td><input type="text" id="score7Nr" readonly  class="moy"></td></tr>
+                            </table>
+                            <img src=""  id="img1" alt="" width="200cm"  >
+                            <audio id="admis" >
+                                <source src="audio/Yankou Mc - Admis(e) Yami 2023 أغنية البكالوريا 2023 أدمي يامي الأصلية Official Audio (mp3cut.net).mp3">
+                                your browser dont support music
+                            </audio>
+                        </fieldset>
+                    </form>
+
+                    <div id="footer">
+                        <p> copyright &copy; Mohamed El Fehri<span ></span>| All Rights Reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script>
+        function toggleInput() {
+    checkbox = document.getElementById("dispenserCheckbox");
+    input = document.getElementById("spNr");
+
+   if (checkbox.checked) {
+       input.setAttribute("disabled", "disabled");
+   } else {
+       input.removeAttribute("disabled");
+   }
+}
+
+
+//Session principale nouveau regime
+function calculNr() {
+
+
+   //Récupérer les notes dans des variables
+   var math = parseFloat(document.getElementById("maNr").value),
+       physique = parseFloat(document.getElementById("phyNr").value),
+       français = parseFloat(document.getElementById("frNr").value),
+       philo = parseFloat(document.getElementById("phNr").value),
+       arabe = parseFloat(document.getElementById("arNr").value),
+       sport = parseFloat(document.getElementById("spNr").value),
+       option = parseFloat(document.getElementById("opNr").value),
+       anglais = parseFloat(document.getElementById("anNr").value),
+       science = parseFloat(document.getElementById("sc").value),
+       info = parseFloat(document.getElementById("in").value),
+       checkbox = document.getElementById("dispenserCheckbox"),
+       
+
+       som_notes, som_coef, moy, fg, score7, fb, fs;
+   if (option > 10)
+       option = eval((option - 10))
+   else
+       option = 0
+
+   if (checkbox.checked) {
+       sport = 10;
+   }
+   //calculer la moyenne du session principale nouveau regime
+   som_notes = eval((math * 4) + (physique * 4) + science + français + philo + arabe + sport + option + anglais + info);
+   som_coef = 15;
+   moy = eval(som_notes / som_coef);
+   //calculer le score nouveau regime
+   fb = eval(moy * 4);
+   fs = eval((2 * math) + (1.5 * physique) + (0.5 * science) + anglais + français);
+   fg = eval(fb + fs);
+   scor7 = eval(fg + ((fg * 7) / 100));
+   //affichage des resultas
+   document.getElementById("moyNr").value = moy.toFixed(2);
+   document.getElementById("scoreNr").value = fg.toFixed(2);
+   document.getElementById("score7Nr").value = scor7.toFixed(2);
+
+   var input = document.getElementById("moyNr");
+   var image = document.getElementById("img1");
+   var img="images/admis-removebg-preview.png";
+   var img2="images/zokhsin.jpg";  
+   if (parseFloat(input.value) >= 10) {
+     image.src =img; 
+     document.getElementById('admis').play();
+   } 
+   else {
+     image.src = img2; 
+   }
+}
+    </script>
+   
+
+</body>
+
+</html>
