@@ -1,0 +1,154 @@
+#h1{
+    font-size: 25px;
+    color: black;
+    overflow: hidden;
+    position: relative;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#h1::after{
+content: "Informatique";
+display: inline-block;
+animation: animation 4s steps(9) infinite;
+width: 0ch;
+color: lightseagreen;
+
+
+}
+
+
+@keyframes animation {
+    14%{
+        content: "Informatique";
+        width:auto;
+    }
+    28%{ width: auto;
+        content: "Science experimental";
+    }
+    42%{width:auto;
+    content: "Lettre";
+    }
+    56%{width:auto;
+    content: "Technique";
+    }
+    70%{width:auto;
+    content: "Sport";
+    }
+    84%{width:auto;
+    content: "Economique";
+    }
+    98%{
+        width:auto;
+    content: "Math";
+    }
+}
+.minicercle{
+    border-style: solid;
+    border-color: black;
+    width: 3cm;
+    border-radius:5px ;
+    
+}
+.box1{
+    position: relative;
+    margin-inline: 3%;
+    
+}
+.section{
+    margin-top: 20px;
+    display: flex;
+}
+.label{
+    font-weight: bold;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    
+    
+    cursor: pointer;    
+    font-size: 20px;    
+
+}
+a:link{color:black;
+text-decoration: none;}
+a:hover{
+    color:grey;
+}
+a:visited{
+    color:black;
+}
+table {
+    
+    border-collapse: separate;
+    border-spacing: 30px; /* Adjust the spacing value as needed */
+  }
+  
+  td, th {
+    padding: 10px;
+     /* Adjust the padding value as needed */
+  }
+
+
+  @keyframes shake {
+    0% { transform: translateX(0); }
+    20% { transform: translateX(-5px); }
+    40% { transform: translateX(5px); }
+    60% { transform: translateX(-5px); }
+    80% { transform: translateX(5px); }
+    100% { transform: translateX(0); }
+  }
+  input:valid{
+    border-color: green;
+  }
+  input:invalid {
+    border-color: red;
+    animation: shake 0.4s linear;
+  }
+ 
+h3{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: normal;
+    font-style: normal; 
+    background-color: tomato;
+    width: auto;
+    text-align: center;
+    border-radius: 5px;
+    color: white;
+}
+legend{
+    background-color: white;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-left: 10%;
+    width: 3cm;
+    border-color: black;
+    border: solid;
+}
+.moy{
+    width: 100px;
+    height: 25px;
+    border-color: black;
+    
+}
+.inputinf{
+   height: 30px;
+   
+   width: 100%;
+}
+#calc{
+    width: 200px;
+    height: 50px;
+    margin-left: 15cm;
+    border-radius: 5%;
+    border: none;
+    background-color: gray;
+    font-size: large;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    
+
+}
+#calc:hover{
+    color: wheat;
+    inset:initial;
+}
